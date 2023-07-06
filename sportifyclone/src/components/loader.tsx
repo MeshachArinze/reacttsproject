@@ -1,6 +1,7 @@
+"use client"
+
 import { ThreeDots } from "react-loader-spinner";
 import Image from "next/image";
-import { memo } from "react";
 
 function Loader() {
   return (
@@ -29,4 +30,4 @@ function Loader() {
   );
 }
 
-export default memo(Loader);
+export default Loader;

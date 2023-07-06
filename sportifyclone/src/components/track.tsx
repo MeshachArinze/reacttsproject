@@ -3,7 +3,7 @@ import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { memo, useState } from "react";
 import { useRecoilState } from "recoil";
-import { playTrackState, playState } from "../../atom/play-atom";
+import { playTrackState, playState } from "../atom/play-atom";
 import Image from "next/image";
 
 function Track({ track, chooseTrack }: any) {

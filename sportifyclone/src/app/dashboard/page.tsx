@@ -1,4 +1,6 @@
-import React, { Suspense } from "react";
+"use client"
+
+import { Suspense } from "react";
 import DashboardLayout from "./layout";
 import Template from "../template";
 import RootBoundary from "./error-boundary";

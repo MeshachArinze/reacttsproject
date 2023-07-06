@@ -1,9 +1,11 @@
+"use client"
+
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, memo } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { SignalIcon } from "@heroicons/react/24/solid";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import { Fragment } from "react";
 
 
 // session?.user?.image;
@@ -72,4 +74,4 @@ function Dropdown({src}: DropProps) {
   );
 }
 
-export default memo(Dropdown);
+export default Dropdown;

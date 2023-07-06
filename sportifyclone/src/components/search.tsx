@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { MdOutlineShortText } from "react-icons/md";
 
 function Search({ search, setSearch }: string | any) {
@@ -29,4 +28,4 @@ function Search({ search, setSearch }: string | any) {
   );
 }
 
-export default memo(Search);
+export default Search;
