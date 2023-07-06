@@ -1,7 +1,7 @@
+
 import { useRecoilState } from "recoil";
-import { playTrackState, playState } from "../../atom/play-atom";
+import { playTrackState, playState } from "../atom/play-atom";
 import Image from "next/image";
-import { memo } from "react";
 
 function RecentlyPlayed({ track, chooseTrack }: any) {
   const [play, setPlay] = useRecoilState(playState);
@@ -34,4 +34,4 @@ function RecentlyPlayed({ track, chooseTrack }: any) {
   );
 }
 
-export default memo(RecentlyPlayed);
+export default RecentlyPlayed;

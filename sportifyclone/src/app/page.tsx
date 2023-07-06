@@ -1,8 +1,9 @@
-import Myapp from '@/app/pages/app'
-import Dashboard from './pages/dashboard';
-import Loader from './pages/loader';
+"use client"
+
+import Dashboard from '@/components/dashboard';
+import Loader from '@/components/loader';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { useRouter } from "next/navigation";
 import { RecoilRoot } from "recoil";
 import { Metadata } from "next";
 

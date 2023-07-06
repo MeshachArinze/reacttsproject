@@ -1,8 +1,7 @@
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import { useRecoilState } from "recoil";
-import { playTrackState, playState } from "../../atom/play-atom";
+import { playTrackState, playState } from "../atom/play-atom";
 import Image from "next/image";
-import { memo } from "react";
 
 function Poster({ track, chooseTrack }: any) {
   const [play, setPlay] = useRecoilState(playState);
@@ -45,4 +44,4 @@ function Poster({ track, chooseTrack }: any) {
   );
 }
 
-export default memo(Poster);
+export default Poster;

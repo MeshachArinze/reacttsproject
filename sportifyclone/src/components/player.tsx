@@ -1,7 +1,9 @@
-import { memo, useEffect } from "react";
+"use client"
+
+import { useEffect } from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
 import { useRecoilState } from "recoil";
-import { playTrackState, playState } from "../../atom/play-atom";
+import { playTrackState, playState } from "../atom/play-atom";
 
 function Player({ accessToken, trackUri }: any) {
   const [play, setPlay] = useRecoilState(playState);
@@ -16,7 +18,6 @@ function Player({ accessToken, trackUri }: any) {
   if (!accessToken) return null;
 
   return (
-
     <SpotifyPlayer
       styles={{
         activeColor: "#fff",
@@ -45,4 +46,4 @@ function Player({ accessToken, trackUri }: any) {
   );
 }
 
-export default memo(Player);
+export default Player;

@@ -1,66 +1,68 @@
+"use client";
+
 import { useState, useEffect, memo } from "react";
 import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 
 // Client Components:
-const Poster = dynamic(() => import('./poster'))
-const Search = dynamic(() => import('./search'))
-const Track = dynamic(() => import('./track'), { ssr: false })
+const Poster = dynamic(() => import("./poster"));
+const Search = dynamic(() => import("./search"));
+const Track = dynamic(() => import("./track"), { ssr: false });
 
+function Body({ spotifyApi, chooseTrack }: any) {
+  const { data: session } = useSession();
+  const accessToken = session?.user;
+  const [search, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [newReleases, setNewReleases] = useState([]);
 
-function Body ({ spotifyApi, chooseTrack }: any)  {
- const { data: session } = useSession();
- const accessToken = session?.user;
- const [search, setSearch] = useState("");
- const [searchResults, setSearchResults] = useState([]);
- const [newReleases, setNewReleases] = useState([]);
+  useEffect(() => {
+    if (!accessToken) return;
+    spotifyApi.setAccessToken(accessToken);
+  }, [accessToken, spotifyApi]);
 
- useEffect(() => {
-   if (!accessToken) return;
-   spotifyApi.setAccessToken(accessToken);
- }, [accessToken, spotifyApi]);
+  // Searching...
+  useEffect(() => {
+    if (!search) return setSearchResults([]);
+    if (!accessToken) return;
 
- // Searching...
- useEffect(() => {
-   if (!search) return setSearchResults([]);
-   if (!accessToken) return;
+    spotifyApi.searchTracks(search).then((res: any) => {
+      setSearchResults(
+        res.body.tracks.items.map((track: any) => {
+          return {
+            id: track.id,
+            artist: track.artists[0].name,
+            title: track.name,
+            uri: track.uri,
+            albumUrl: track.album.images[0].url,
+            popularity: track.popularity,
+          };
+        })
+      );
+    });
+  }, [search, accessToken, spotifyApi]);
 
-   spotifyApi.searchTracks(search).then((res: any) => {
-     setSearchResults(
-       res.body.tracks.items.map((track: any) => {
-         return {
-           id: track.id,
-           artist: track.artists[0].name,
-           title: track.name,
-           uri: track.uri,
-           albumUrl: track.album.images[0].url,
-           popularity: track.popularity,
-         };
-       })
-     );
-   });
- }, [search, accessToken, spotifyApi]);
+  // New Releases...
+  useEffect(() => {
+    if (!accessToken) return;
 
- // New Releases...
- useEffect(() => {
-   if (!accessToken) return;
+    spotifyApi.getNewReleases().then((res: any) => {
+      setNewReleases(
+        res.body.albums.items.map((track: any) => {
+          return {
+            id: track.id,
+            artist: track.artists[0].name,
+            title: track.name,
+            uri: track.uri,
+            albumUrl: track.images[0].url,
+          };
+        })
+      );
+    });
+  }, [accessToken, spotifyApi]);
 
-   spotifyApi.getNewReleases().then((res:any) => {
-     setNewReleases(
-       res.body.albums.items.map((track: any) => {
-         return {
-           id: track.id,
-           artist: track.artists[0].name,
-           title: track.name,
-           uri: track.uri,
-           albumUrl: track.images[0].url,
-         };
-       })
-     );
-   });
- }, [accessToken, spotifyApi]);
-
-  return <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">
+  return (
+    <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">
       <Search search={search} setSearch={setSearch} />
       <div className="grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 p-4">
         {searchResults.length === 0
@@ -131,7 +133,6 @@ function Body ({ spotifyApi, chooseTrack }: any)  {
         </div>
       </div>
     </section>
-
-};
-
-export default memo(Body);
+  );
+}
+export default Body;

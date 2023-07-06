@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+import SpotifyProvider from "next-auth/providers/spotify";
 
 export const handler = {
   // Configure one or more authentication providers
@@ -11,10 +12,6 @@ export const handler = {
     // ...add more providers here
   ],
 };
-
-export { handler as GET, handler as POST };
-
-import SpotifyProvider from "next-auth/providers/spotify";
 
 /**
  * Takes a token, and returns a new token with updated
@@ -104,3 +101,5 @@ export default NextAuth({
     },
   },
 });
+
+export { handler as GET, handler as POST };

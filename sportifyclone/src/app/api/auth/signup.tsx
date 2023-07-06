@@ -1,9 +1,11 @@
+"use client"
+
 import { getProviders, signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import Loader from "../../components/loader";
+import Loader from "../../../components/loader";
 
 function Signin({ providers }: any) {
   const { data: session } = useSession();

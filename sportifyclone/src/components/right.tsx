@@ -1,7 +1,7 @@
 import { HiOutlineShieldCheck } from "react-icons/hi";
 import { MdOutlineSettings } from "react-icons/md";
 import { BiBell } from "react-icons/bi";
-import { ViewColumnsIcon } from "@heroicons/react/24/solid"
+import { ViewColumnsIcon } from "@heroicons/react/24/solid";
 import Dropdown from "./dropdown";
 import { memo, useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
@@ -66,4 +66,4 @@ function Right({ spotifyApi, chooseTrack }: any) {
   );
 }
 
-export default memo(Right);
+export default Right;
