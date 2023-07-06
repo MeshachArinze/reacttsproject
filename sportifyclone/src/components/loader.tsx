@@ -1,3 +1,5 @@
+"use client"
+
 import { ThreeDots } from "react-loader-spinner";
 import Image from "next/image";
 
