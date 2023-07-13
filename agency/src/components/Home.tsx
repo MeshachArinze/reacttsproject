@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, ScrollRestoration } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
 const Home: React.FC = () => {
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             aspernatur culpa maxime laboriosam, impedit quae officiis
             consectetur
           </p>
-          <Link to="/contact/*" className="btn">
+          <Link to="/contact" className="btn">
             Get Started
           </Link>
         </div>
