@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Nav from './Nav';
 
 const Contact = () => {
@@ -67,16 +66,16 @@ const Contact = () => {
               <img src="/images/email.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Email</h4>
-                <Link to="mailto:anyone@example.com">anyone@example.com</Link>
-                <Link to="mailto:anyone@example.com">anyone@example.com</Link>
+                <a href="mailto:anyone@example.com">anyone@example.com</a>
+                <a href="mailto:anyone@example.com">anyone@example.com</a>
               </div>
             </div>
             <div className="info-box">
               <img src="/images/call.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Call</h4>
-                <Link to="tel:+2349131083175">9037766269</Link>
-                <Link to="tel:+2349037766269">9037766269</Link>
+                <a href="tel:+2349131083175">9037766269</a>
+                <a href="tel:+2349037766269">9037766269</a>
               </div>
             </div>
           </div>
