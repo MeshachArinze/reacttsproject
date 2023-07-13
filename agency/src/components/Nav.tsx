@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className="navigation">
       <ul>
-        { navdata?.map((data) => {
+        { navdata.map((data) => {
           return (
             <li key={data.id}>
               <Link to={data.ref}>{data.name}</Link>
@@ -16,7 +16,7 @@ const Nav = () => {
 
       <div className="social-bar">
         <ul>
-          {navIcon?.map((icon) => (
+          {navIcon.map((icon) => (
             <li key={icon["id"]}>
               <Link to={icon.to}>
                 <img src={icon["src"]} alt="" />

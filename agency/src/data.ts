@@ -13,17 +13,17 @@ export const navdata: navData[] = [
     {
         id: 2,
         name: "Services",
-        ref: "/services/*",
+        ref: "/services",
     },
     {
         id: 3,
         name: "Work",
-        ref: "/work/*",
+        ref: "/work",
     },
     {
         id: 4,
         name: "Contact",
-        ref: "/contact/*",
+        ref: "/contact",
     },
 ];
 
