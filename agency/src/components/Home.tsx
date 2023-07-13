@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div>
       <header>
