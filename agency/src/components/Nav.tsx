@@ -2,7 +2,7 @@ import React from "react";
 import { Link} from "react-router-dom";
 import { navIcon, navdata } from "../data";
 
-const Nav: React.FC = () => {
+const Nav = () => {
   return (
     <div className="navigation">
       <ul>
