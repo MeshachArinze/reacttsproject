@@ -15,7 +15,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import GlobalSpinner from "./components/loading/GlobalSpinner";
 
-const App: React.FC = () => {
+const App = () => {
 
   const navigation = useNavigation();
   
@@ -30,13 +30,13 @@ const App: React.FC = () => {
             errorElement={<RootErrorBoundary />}
           >
             <Route
-              path="/work/*"
+              path="/work/"
               element={<Work />}
               errorElement={<ProjectErrorBoundary />}
               loader={ProjectLoader}
             />
-            <Route path="/services/*" element={<Services />} />
-            <Route path="/contact/*" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Route>
       </Routes>

@@ -3,15 +3,7 @@ import { Link } from "react-router-dom"
 import Nav from './Nav';
 // import { useNavigation } from 'react-router-dom';
 
-const Contact: React.FC = () => {
-  //  const navigation = useNavigation();
-
-  //  const text =
-  //    navigation.state === "submitting"
-  //      ? "Saving..."
-  //      : navigation.state === "loading"
-  //      ? "Saved!"
-  //      : "Go";
+const Contact = () => {
   return (
     <div>
       <header>

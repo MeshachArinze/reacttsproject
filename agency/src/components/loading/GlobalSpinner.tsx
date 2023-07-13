@@ -1,6 +1,4 @@
-import React from 'react'
-
-const GlobalSpinner:React.FC = () => {
+const GlobalSpinner = () => {
   return (
     <div>GlobalSpinner</div>
   )
