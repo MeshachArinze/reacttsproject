@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import Nav from './Nav';
-// import { useNavigation } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -46,7 +45,7 @@ const Contact = () => {
               </div>
               <div className="row">
                 <div className="input100">
-                  <button type="submit" >submit</button>
+                  <button type="submit">submit</button>
                 </div>
               </div>
             </form>
@@ -54,7 +53,11 @@ const Contact = () => {
 
           <div className="contact-info">
             <div className="info-box">
-              <img src="/images/Linkddress.png" className="contact-icon" alt="" />
+              <img
+                src="/images/Linkddress.png"
+                className="contact-icon"
+                alt=""
+              />
               <div className="details">
                 <h4>Address</h4>
                 <p>28 Neon Tower, New York City, USA</p>
@@ -72,8 +75,8 @@ const Contact = () => {
               <img src="/images/call.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Call</h4>
-                <Link to="tel:+19785555555">+1 978 555 5555</Link>
-                <Link to="tel:+19784444444">+1 978 555 4444</Link>
+                <Link to="tel:+2349131083175">9037766269</Link>
+                <Link to="tel:+2349037766269">9037766269</Link>
               </div>
             </div>
           </div>

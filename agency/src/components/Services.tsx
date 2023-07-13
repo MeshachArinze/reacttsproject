@@ -1,6 +1,6 @@
 import Nav from "./Nav";
 
-export default function Services():JSX.Element {
+export default function Services() {
   return (
     <div>
       Services
