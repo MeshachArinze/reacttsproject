@@ -7,8 +7,16 @@ import { useRef, useState } from "react";
 import ListItem from "../listItem/ListItem";
 import "./list.scss";
 
+type Display = "block" | "inline" | "inline-block" | "none";
+
+
+type DisplayValue = false | "none" | Display;
+const displayValue: DisplayValue = false; // or "none" or an instance of Display
+
+
 export default function List() {
   const [isMoved, setIsMoved] = useState<boolean>(false);
+  console.log(isMoved);
   const [slideNumber, setSlideNumber] = useState<number>(0);
 
   const listRef = useRef<HTMLDivElement | null >(null);
@@ -28,17 +36,9 @@ export default function List() {
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
 
-    // const distance = listRef.current.getBoundingClientRect().x - 50;
-    // if (direction === "left" && slideNumber > 0) {
-    //   setSlideNumber(slideNumber - 1);
-    //   listRef.current.style.transform = `translateX(${230 + distance}px)`;
-    // }
+    
 
-
-    // if (direction === "right" && slideNumber < 5) {
-    //   setSlideNumber(slideNumber + 1);
-    //   listRef.current.style.transform = `translateX(${-230 + distance}px)`;
-    // }
+   
   };
   return (
     <div className="list">
@@ -47,7 +47,7 @@ export default function List() {
         <ArrowBackIosOutlined
           className="sliderArrow left"
           onClick={() => handleClick("left")}
-          style={{ display: !isMoved && "none" }}
+          style={{ display: displayValue || undefined }}
         />
         <div className="container" ref={listRef}>
           <ListItem index={0} />
