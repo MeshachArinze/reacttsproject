@@ -1,5 +1,4 @@
 
-import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
 const Home = () => {
@@ -25,9 +24,9 @@ const Home = () => {
             aspernatur culpa maxime laboriosam, impedit quae officiis
             consectetur
           </p>
-          <Link to="/contact" className="btn">
+          <a href="/contact" className="btn">
             Get Started
-          </Link>
+          </a>
         </div>
       </section>
         

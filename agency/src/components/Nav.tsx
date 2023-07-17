@@ -1,4 +1,3 @@
-import { Link} from "react-router-dom";
 import { navIcon, navdata } from "../data";
 
 const Nav = () => {
@@ -8,7 +7,7 @@ const Nav = () => {
         { navdata.map((data) => {
           return (
             <li key={data.id}>
-              <Link to={data.ref}>{data.name}</Link>
+              <a href={data.ref}>{data.name}</a>
             </li>
           );
         }) }
@@ -18,15 +17,15 @@ const Nav = () => {
         <ul>
           {navIcon.map((icon) => (
             <li key={icon["id"]}>
-              <Link to={icon.to}>
+              <a href={icon.to}>
                 <img src={icon["src"]} alt="" />
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
-        <Link to="mailto:you@email.com" className="email-icon">
+        <a href="mailto:you@email.com" className="email-icon">
           <img src="/images/email.png" alt="" />
-        </Link>
+        </a>
       </div>
     </div>
   );
