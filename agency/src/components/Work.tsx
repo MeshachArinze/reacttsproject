@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Nav from './Nav';
 
 const Work = () => {
@@ -27,97 +26,97 @@ const Work = () => {
           <div className="item">
             <img src="/images/portfolio-item1.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item2.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item3.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item4.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item5.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item6.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item7.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item8.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item9.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item10.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item11.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item12.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item13.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item14.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item15.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
           <div className="item">
             <img src="/images/portfolio-item16.jpg" alt="" />
             <div className="action">
-              <Link to="#">Launch</Link>
+              <a href="#">Launch</a>
             </div>
           </div>
         </div>

@@ -1,26 +1,7 @@
 import React, {useState} from 'react'
 
 const Faq = () => {
-     const [activeIndex, setActiveIndex] = useState(null);
-
-     const handleClick = (index) => {
-       setActiveIndex(index === activeIndex ? null : index);
-     };
-
-     const renderAccordionItem = (index, title, content) => {
-       const isActive = index === activeIndex;
-       return (
-         <div key={index}>
-           <button
-             className={`show ${isActive ? "active" : ""}`}
-             onClick={() => handleClick(index)}
-           >
-             {title}
-           </button>
-           <div className={`show ${isActive ? "show" : ""}`}>{content}</div>
-         </div>
-       );
-     };
+     
   return (
     <section class="faq">
       <div class="inner-container">
