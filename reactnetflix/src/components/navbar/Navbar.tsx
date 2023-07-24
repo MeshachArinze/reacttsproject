@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   window.onscroll = () => {
     setIsScrolled(window.scrollY === 0 ? false : true);
