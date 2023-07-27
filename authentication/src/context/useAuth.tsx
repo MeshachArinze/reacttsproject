@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import ThemeContext from "./ThemeContext";
+import { AuthState } from "../hooks/useAuth";
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -16,7 +16,7 @@ const useAuth = (): [AuthState, (auth: AuthState) => void] => {
 };
 
 const SomeComponent: React.FC = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useContext(AuthState);
   const [auth, setAuth] = useAuth();
 
   // Update the auth state when the user logs in
@@ -32,7 +32,7 @@ const SomeComponent: React.FC = () => {
   return (
     <div>
       {/* Render the theme colors */}
-      <h1 style={{ color: theme?.primaryColor }}>Welcome to our App!</h1>
+      <h1 style={{ color: theme.primaryColor }}>Welcome to our App!</h1>
 
       {/* Show different content based on user authentication */}
       {auth.isAuthenticated ? (

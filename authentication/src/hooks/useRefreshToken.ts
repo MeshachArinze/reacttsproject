@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import axios from "axios";
+import axiosPrivate from "../api/axios";
 import useAuth from "./useAuth";// Adjust the import path based on the actual location of the useAuth file
 
 interface AdditionalData {
@@ -9,7 +9,7 @@ interface AdditionalData {
 }
 
 const useRefresh = (additionalData?: AdditionalData): (() => void) => {
-  const [, setAuth] = useAuth(); // Destructure setAuth from the useAuth hook
+  const [, setAuth] = useAuth(null); // Destructure setAuth from the useAuth hook
 
   useEffect(() => {
     const RefreshAccessToken = async () => {
@@ -23,7 +23,7 @@ const useRefresh = (additionalData?: AdditionalData): (() => void) => {
             }
           : undefined;
         // Replace 'YOUR_REFRESH_TOKEN_ENDPOINT' with your actual API endpoint for refreshing the token
-        const response = await axios.post("/refresh", {
+        const response = await axiosPrivate.post("/refresh", {
           withCredentials: true, config
         });
 
@@ -66,7 +66,7 @@ const useRefresh = (additionalData?: AdditionalData): (() => void) => {
       };
 
       // Make the refresh API call with custom headers
-      const response = await axios.post(
+      const response = await axiosPrivate.post(
         "YOUR_REFRESH_TOKEN_ENDPOINT",
         {},
         config
