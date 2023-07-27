@@ -1,7 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useGlobalContext } from "./context";
 import { Link } from "react-router-dom";
 const url =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
+
+// type movie = {
+//   imdbID: number,
+//   Poster: string,
+//   Title: string,
+//   Year: string
+// };
 
 
 

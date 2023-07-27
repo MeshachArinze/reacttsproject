@@ -14,12 +14,12 @@ type data = {
     Title: string
 }
 
-const useFetch = (urlParams: any) => {
+const useFetch = (urlParams: string) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<props>({ show: false, msg: "" });
   
   const [data, setData] = useState<data>({Poster: "", Date: "", Plot: "", Year: "", Title: ""});
-  const fetchMovies = async (url: any) => {
+  const fetchMovies = async (url: string) => {
     setIsLoading(true);
     try {
       const response = await fetch(url);
